@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 const connection = async() => {
 
     try {
 
-        await  mongoose.connect('mongodb://localhost:27017/my_blog')
+        await  mongoose.connect(process.env.conectar)
 
         console.log('Conectado correctamente a la BBDD "my_blog"');
         
