@@ -10,7 +10,8 @@ connection();
 
 // Crear servidor de Node
 const app = express();
-const puerto = 3900;
+// const puerto = 3900;
+const puerto = process.env.PORT;
 
 // configurar cors
 app.use(cors())
