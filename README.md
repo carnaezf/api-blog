@@ -10,7 +10,7 @@ Asegúrate de tener instalado [MongoDB](https://www.mongodb.com/), [Node.js](htt
 1. Clona este repositorio:
 
 ```bash
-git clone https://github.com/tu-usuario/api_blog.git
+git clone https://github.com/carnaezf/api_blog.git
 ```
 
 2. Navega al directorio del proyecto:
@@ -25,13 +25,6 @@ cd api_blog
 npm install
 ```
 
-4. Configura las variables de entorno:
-
-Crea un archivo `.env` en el directorio raíz del proyecto y proporciona los siguientes valores:
-
-```plaintext
-MONGODB_URI=URI_de_tu_instancia_de_MongoDB
-```
 
 ## Uso
 
@@ -47,14 +40,13 @@ El servidor se ejecutará en `http://localhost:3000`.
 
 A continuación se enumeran los principales endpoints disponibles en esta API:
 
-- `POST /articles`: Crea un nuevo artículo.
-- `POST /articles/upload`: Sube una imagen relacionada con un artículo.
-- `GET /articles`: Obtiene todos los artículos.
-- `GET /articles/:id`: Obtiene un artículo específico por su ID.
+- `POST /create`: Crea un nuevo artículo.
+- `POST /subir-imagen/:id`: Sube una imagen relacionada con un artículo.
+- `GET /articles/:ultimos?`: Obtiene todos los artículos o los tres ultimos.
+- `GET /article/:id`: Obtiene un artículo específico por su ID.
 - `PUT /articles/:id`: Actualiza un artículo existente.
 - `DELETE /articles/:id`: Elimina un artículo existente.
 
-**Importante**: Para acceder a los endpoints que requieren autenticación, se debe proporcionar un token válido en el encabezado `Authorization`.
 
 ## Contribuir
 
